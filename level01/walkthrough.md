@@ -1,5 +1,3 @@
-**
-
 ## Level01
 
 Lorsqu’on lance le programme, celui-ci nous demande un login.

@@ -6,7 +6,7 @@ En le lançant le programme nous demande d'entrée un nom d'utilisateur et un mo
     | You must login to access this system. |
     \**************************************/
     --[ Username: login
-    --[ Password: zadzdz
+    --[ Password: pass
     *****************************************
     login does not have access!
 

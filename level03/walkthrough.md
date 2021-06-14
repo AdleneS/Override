@@ -15,7 +15,17 @@ Enfin c'est la fonction `decrypt()` qui va nous permettre d'accéder à un promp
 Il nous faut donc tester toutes les solutions possible de `0x1337d00d - 1` à `0x1337d00d - 9` et de` 0x1337d00d - 16` à `0x1337d00d - 21`.
 
 On va donc créer un programme en python pour nous facilité la tache.
-
+    
+    import os
+    
+    nb = [1,2,3,4,5,6,7,8,9,16,17,18,19,20,21]
+    hex = 0x1337d00d
+    
+    for n in nb:
+        arg = hex - n
+        print(str(n), str(arg))
+        os.system("(echo "+ str(arg) + "; cat) | ./level03")
+            
 La 18ème solution fonctionne. On peut donc cat le .pass.
 
     18

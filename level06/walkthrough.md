@@ -77,6 +77,8 @@ Breakpoint 2, 0x08048869 in auth ()
 0xffffd2a8:     0x005f1ab3
 ```
 
+On print l'ebp-0x10 qui contient la valeur comparée.
+
 0x005f1ab3 en décimal donne : **6232755**
 
 On relance le programme, toujours avec le même login et on entre **6232755** comme serial key.

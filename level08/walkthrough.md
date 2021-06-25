@@ -10,22 +10,16 @@ ERROR: Failed to open (null)
 
 Il faut donc ouvrir le programme avec un fichier.
 
-On voit en analysant le binaire que celui-ci essaie de créer un backup.
+On voit en analysant le binaire que celui-ci essaie de créer un backup du fichier mit en argument.
 
-On essaie alors de créer un fichier dans tmp et on essaie de mettre celui-ci en argument.
-
-```
-level08@OverRide:~$ ./level08 /tmp/arg
-ERROR: Failed to open ./backups//tmp/arg
-```
-Ça ne fonctionne pas, essayons d'ouvrir le .pass du level09.
+Essayons d'ouvrir le .pass du level09.
 ```
 level08@OverRide:~$ ./level08 ~level09/.pass
 ERROR: Failed to open ./backups//home/users/level09/.pass
 ```
-Le programme ajoute /backups/  à notre path. Le problème est que cela fausse notre argument.
+Le programme essaie de créer le backup dans le path `./backups//home/users/level09/.pass`. Le problème est que celui-ci n'existe pas.
 
-On doit alors créer le même path dans le tmp pour que le programme puisse y accéder il faut toujours le lancer à partir de tmp.
+On doit alors créer le même path dans le tmp. Pour que le programme puisse y accéder il faut toujours le lancer à partir de tmp car celui-ci utilise le relative path.
 
 ```
 level08@OverRide:/tmp$ mkdir -p ./backups//home/users/level09/

@@ -1,9 +1,9 @@
-typedef struct s_message
+typedef struct s_msg
 {
     char text[140];
     char username[40];
     int len;
-} t_message;
+} t_msg;
 
 void secret_backdoor() {
     char buffer[128];

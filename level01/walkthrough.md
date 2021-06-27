@@ -46,7 +46,7 @@ Le problème c’est qu’on ne voit pas de /bin/sh dans le programme. On va don
     (gdb) 0xf7f897ec
 		1 pattern found.
 
-Ici nous cherchons /bin/sh entre les adresses  **0xf7e2b000** et **0xf7ffdd00** grâce à gdb on trouve que /bin/sh ce trouve à l'adresse : **0xf7f897ec**
+Ici nous cherchons /bin/sh entre les adresses  **0xf7e2b000** et **0xf7ffdd00** grâce à gdb on trouve que /bin/sh se trouve à l'adresse : **0xf7f897ec**
 
 
     (gdb) info function system

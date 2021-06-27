@@ -11,7 +11,7 @@ En le lançant le programme nous demande d'entrée un nom d'utilisateur et un mo
     login does not have access!
 
 
-Quoi que l'ont mettent on nous dit que nous n'avons pas les accès.
+Quoi que l'on met on nous dit que nous n'avons pas les accès.
 
 Dans le programme nous trouvons un printf, il va donc falloir utiliser une *format string attack*.
 

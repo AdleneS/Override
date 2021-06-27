@@ -2,9 +2,9 @@ int main(int argc, char*argv[]) {
     int ac = argc;
     char **av = argv;
 
-    int8_t username[100]; 
-    int8_t pass[42];
-    int8_t pwd[100];
+    int8_t *username; 
+    int8_t *pass;
+    int8_t *pwd;
     size_t read_ret = 0;
     FILE *pwd_file = 0;
   

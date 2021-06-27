@@ -1,15 +1,3 @@
-
-void clear_stdin() {
-    int8_t val = 0;
-
-    while (1) {
-        val = getchar();
-        if (val == '\n' || val == EOF) {
-            return;
-        }
-    }
-}
-
 unsigned int get_unum(void) {
     uint32_t var1 = 0;
 
@@ -24,8 +12,8 @@ void prog_timeout() {
 }
 
 int store_number(int32_t *buffer) {
-    uint32_t number; // EBP - 0x10
-    uint32_t index; // EBP - 0xc
+    uint32_t number;
+    uint32_t index;
 
     printf(" Number: ");
     number = get_unum();
@@ -43,7 +31,7 @@ int store_number(int32_t *buffer) {
 }
 
 int read_number(int32_t *buffer) {
-    uint32_t index = 0; // EBP - 0xc
+    uint32_t index = 0;
 
     printf(" Index:");
     index = get_unum();
@@ -52,12 +40,12 @@ int read_number(int32_t *buffer) {
 }
 
 int main(int argc, char *argv[], char *envp[]) {
-    int8_t buffer[0x64] = {0}; // ESP + 0x24
-    int8_t **av = argv; // ESP + 0x1c
-    int8_t **ep = envp; // ESP + 0x18
+    int8_t buffer[0x64] = {0};
+    int8_t **av = argv;
+    int8_t **ep = envp;
 
-    int32_t cmd_ret = 0; // ESP + 0x1b4
-    int8_t cmd_buffer[20] = {0}; // ESP + 0x1b8
+    int32_t cmd_ret = 0;
+    int8_t cmd_buffer[20] = {0};
 
     while (*av) {
         memset(*av, 0, strlen(*av));

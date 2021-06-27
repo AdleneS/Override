@@ -27,7 +27,7 @@ int main()
             return 0;
         }
 
-        if (ptrace(3, ret, 0x2c, 0) == 0xb) { // If syscall exec
+        if (ptrace(3, ret, 0x2c, 0) == 0xb) {
             puts("no exec() for you");
             kill(ret, 9);
         }

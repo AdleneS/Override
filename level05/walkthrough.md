@@ -48,7 +48,7 @@ Bien, nous avons maintenant l'adresse de l'exit 0x80497e0
 On va alors mettre l'adresse de notre variable d'environnement dans l'adresse ci-dessus. Le problème est qu'il faut la mettre en décimal ce qui fait beaucoup de caractères. On va donc diviser notre adresse en deux 0xdc7c(56444) et 0xffff (65535) que l'on met respectivement dans 0x80497e0 et 0x80497e2.
 
 On coupe en deux on à donc :
-65535- 56444 = 9091
+65535 - 56444 = 9091
 
 On enlève les 8 octets des deux adresses.
 56444 - 8 = 56436
